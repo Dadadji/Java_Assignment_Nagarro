@@ -1,0 +1,36 @@
+/*Given a binary number ,help Von Neuman to find out its decimal representation.
+For eg 000111 in binary is 7 in decimal.*/
+
+
+import java.util.*;
+import java.util.Scanner;
+public class Main {
+    public static void main(String args[]) {
+        Scanner s=new Scanner(System.in);
+        int n;
+        int a;
+        n=s.nextInt();
+        int[]sum=new int[n];
+        for(int i=0;i<n;i++){
+            a=s.nextInt();
+            int decimal = 0;
+            int p = 0;
+            while(true){
+                if(a == 0){
+                break;
+            } 
+            else {
+                int temp = a%10;
+                decimal += temp*Math.pow(2, p);
+                a = a/10;
+                p++;
+            }
+        }
+        sum[i]=decimal;
+        }
+        for(int k=0;k<n;k++){
+            System.out.println(sum[k]);
+        }
+
+    }
+}

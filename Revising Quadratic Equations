@@ -1,0 +1,53 @@
+/*
+Given coefficients of a quadratic equation , you need to print the nature of the roots (Real and Equal , Real and Equal , Imaginary) and the roots.
+
+First contains three coefficients a,b,c from the equation ax^2 + bx + c = 0.
+
+Sample Input
+
+
+1 -11 28
+
+Sample Output
+
+Real and Distinct
+4 7
+
+Explanation
+
+The input corresponds to equation ax^2 + bx + c = 0. Roots = (-b + sqrt(b^2 - 4ac))/2a , (-b - sqrt(b^2 - 4ac))/2a
+*/
+import java.lang.Math;
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        int a,b,c;
+        double d1,d2;
+        Scanner sc=new Scanner(System.in);
+        a=sc.nextInt();
+        b=sc.nextInt();
+        c=sc.nextInt();
+     
+    if((b*b)-(4*a*c)<0)
+        System.out.println("Imaginary");
+    else{
+        int a1 = (int) (((-b)+Math.sqrt((b*b)-(4*a*c)))/2);
+        int b1= (int) (((-b)-Math.sqrt((b*b)-(4*a*c)))/2);
+        if(a1==b1){
+           System.out.println("Real and Equal"); 
+        }
+        else{
+            System.out.println("Real and Distinct");
+        }
+        if(a1>b1)
+        {
+            int temp=a1;
+            a1=b1;
+            b1=temp;
+        } 
+        System.out.println(a1+" "+b1);
+    }
+    
+    } 
+        
+}

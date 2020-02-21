@@ -1,0 +1,44 @@
+/*
+Help Manmohan to print pattern of a given number. See the output pattern for given input n = 5. 
+1
+11
+202
+3003
+40004
+*/
+package assignments;
+import java.io.*;
+import java.util.*;
+public class ManmohanLovesPatterns1 {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+        int n,k,o,i;
+        n=s.nextInt();
+        for(i=1;i<=n;i++)
+        {
+            if(i>2)
+            {
+                for(k=1;k<=i;k++)
+                {
+                    if(k==1 || k==i)
+                    {
+                        System.out.print(i-1);
+                    }
+                    else{
+                        System.out.print("0");
+                    }
+                }
+                System.out.println("");
+            }
+            else{
+                    for(o=1;o<=i;o++)
+                    {
+                        System.out.print("1");
+                    }
+                    System.out.println("");
+                }
+        }
+
+    }
+	}

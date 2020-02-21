@@ -1,0 +1,44 @@
+/*
+
+Given N, help Manmohan to print pattern upto N lines. For eg For N=6 , following pattern will be printed.
+
+1
+11
+111
+1001
+11111
+100001
+*/
+
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner s=new Scanner(System.in);
+        int n,k,o,i;
+        n=s.nextInt();
+        for(i=1;i<=n;i++)
+        {
+            if(i%2==0)
+            {
+                for(k=1;k<=i;k++)
+                {
+                    if(k==1 || k==i)
+                    {
+                        System.out.print("1");
+                    }
+                    else{
+                        System.out.print("0");
+                    }
+                }
+                System.out.println("");
+            }
+            else{
+                    for(o=1;o<=i;o++)
+                    {
+                        System.out.print("1");
+                    }
+                    System.out.println("");
+                }
+        }
+
+    }
